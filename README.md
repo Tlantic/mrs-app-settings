@@ -22,13 +22,11 @@ Your code will be tested, compiled and minified into *dist* folder
 ```JavaScript
 <script type="text/javascript" src="mrs-app-settings.min.js"></script>
 ```
-
 2. Include angular dependency in your module declaration
 ```JavaScript
 angular.module("MyApp", ["MRS.App.Core", "MRS.App.Settings"]);
 ```
-
-3. Configure your configuration file
+3. Configure your configuration file (see *config/module.conf.json*)
 ```JavaScript
 angular.module("MRS.App.Settings").constant("$mrsappsettingsConfig", {
 	

@@ -1,6 +1,6 @@
 {
   "name": "mrs-app-settings",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Settings module for MRS.Core or Cordova Apps",
   "homepage": "http://github.com/Tlantic/mrs-app-settings",
   "repository": "http://github.com/Tlantic/mrs-app-settings.git",
