@@ -1,0 +1,31 @@
+{
+  "name": "mrs-app-settings",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Tlantic/mrs-app-settings",
+  "authors": [
+    "Tlantic MRS Team"
+  ],
+  "description": "Tlantic MRS settings module for Cordova",
+  "main": "./dist/mrs-app-settings.js",
+  "keywords": [
+    "tlantic",
+    "mrs",
+    "app",
+    "settings"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "config",
+    "!module.conf.json",
+    "src",
+    "docs",
+    "scripts",
+    "test",
+    ".gitignore",
+    ".jshintrc",
+    "gruntfile.js"
+  ]
+}
