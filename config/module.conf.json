@@ -1,0 +1,12 @@
+{
+	"module": "MRS.App.Settings",
+	"modules": ["module1", "module2"],
+	"endpoints": {
+		"check": {
+			"method": "POST",
+			"url": "",
+			"cache": true,
+			"timestamp": 600000
+		}
+	}
+}
