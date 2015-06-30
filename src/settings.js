@@ -1,11 +1,11 @@
 /*global angular*/
 
 /**
-The 'MRS.App.Settings' module provides remote settings fetch and update.
-
-@module MRS.App.Settings
-@beta
-**/
+ * The 'MRS.App.Settings' module provides remote settings fetch and update.
+ * @module MRS.App.Settings
+ * @requires MRS.App.Core
+ * @beta
+ **/
 angular.module('MRS.App.Settings', ['MRS.App.Core']).config(['$mrsappsettingsConfig', function (config) {
     'use strict';
     

@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd HH:MM:ss Z") %> */\n'
             },
             dist: {
-                src: ['src/i18n.js', 'src/*.js'],
+                src: ['src/settings.js', 'src/*.js'],
                 dest: 'dist/' + project.moduleDeployFile
             }
         },

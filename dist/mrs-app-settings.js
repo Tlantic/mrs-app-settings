@@ -1,3 +1,57 @@
+/*! mrs-app-settings - v1.0.0 - 2015-06-30 12:29:26 GMT */
+/*global angular*/
+
+/**
+ * The 'MRS.App.Settings' module provides remote settings fetch and update.
+ * @module MRS.App.Settings
+ * @requires MRS.App.Core
+ * @beta
+ **/
+angular.module('MRS.App.Settings', ['MRS.App.Core']).config(['$mrsappsettingsConfig', function (config) {
+    'use strict';
+    
+    var defaultConfig = {
+        modules: [],
+        endpoints: {
+            check: {
+                url: ''
+            }
+        }
+    };
+
+    // merge config with default
+    var mergedConfig = angular.extend({}, defaultConfig, config);
+    angular.extend(config, mergedConfig);
+}]);
+/**
+ * The Settings adapter is responsible for parsing requests to/from server.
+ * 
+ * @class MRSAppSettingsAdapter
+ * @namespace MRS.App.Settings
+ * @since 1.0.0
+**/
+angular.module('MRS.App.Settings').service('MRSAppSettingsAdapter', ['$mrsappsettingsConfig',
+    function mrsi18nTranslate($config) {
+        
+    'use strict';
+    
+    this.check = {
+        
+        to: function checkTo(modules) {
+            return angular.extend({}, $config.endpoints.check, {
+               data: {
+                   settings: modules
+               }
+            });
+        },
+        
+        from: function checkFrom(result) {
+            return result.data.result;
+        }
+        
+    };
+    
+}]);
 /**
  * The Settings service is responsible for loading setting files from server.
  * 
