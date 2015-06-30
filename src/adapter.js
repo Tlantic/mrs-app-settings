@@ -1,9 +1,9 @@
 /**
-The Settings service is responsible for loading setting files from server.
-
-@class MRSAppSettings
-@namespace MRS.App.Settings
-@since 0.1.0
+ * The Settings adapter is responsible for parsing requests to/from server.
+ * 
+ * @class MRSAppSettingsAdapter
+ * @namespace MRS.App.Settings
+ * @since 1.0.0
 **/
 angular.module('MRS.App.Settings').service('MRSAppSettingsAdapter', ['$mrsappsettingsConfig',
     function mrsi18nTranslate($config) {

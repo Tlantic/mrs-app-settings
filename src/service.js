@@ -1,10 +1,10 @@
 /**
-The Settings service is responsible for loading setting files from server.
-
-@class MRSAppSettings
-@namespace MRS.App.Settings
-@since 0.1.0
-**/
+ * The Settings service is responsible for loading setting files from server.
+ * 
+ * @class MRSAppSettings
+ * @namespace MRS.App.Settings
+ * @since 1.0.0
+ **/
 angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsConfig', '$window', '$log', 'MRSAppSettingsAdapter', 'webProxy',
     function mrsi18nTranslate($config, $window, $log, $adapter, $proxy) {
         
