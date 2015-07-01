@@ -58,7 +58,7 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
      * 
      * @method check
      * @public
-     * @param {string[]} modules The modules string list to check
+     * @param {string[]} modules The modules code string list to check
      * @return promise
      */
     function checkModules(modules) {
@@ -72,7 +72,7 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
             // result must have a list of all settings
             // iterate over them and save
             for(var key in result) {
-                saveModule(result[key].module || results[key].code, result[key].data);
+                saveModule(result[key].code, result[key].data);
             }
             
             return true;
