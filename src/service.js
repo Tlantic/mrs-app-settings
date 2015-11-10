@@ -10,6 +10,14 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
         
     'use strict';
     
+    /**
+     * Request modules list from server.
+     * 
+     * @method requestModulesUpdate
+     * @private
+     * @param {string[]} modules modules list
+     * @return promise
+     */
     function requestModulesUpdate(modules) {
         // Connect to server
         var request = $adapter.check.to(modules);
@@ -31,6 +39,7 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
      * Then, they would be loaded in the next app startup.
      * 
      * @method saveModule
+     * @private
      * @param {string} name Setting name
      * @param {Object} value Any value for setting
      */
@@ -48,8 +57,9 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
      * If there are new version, save.
      * 
      * @method check
-     * @param {string[]} modules The modules string list to check
-     * @public 
+     * @public
+     * @param {string[]} modules The modules code string list to check
+     * @return promise
      */
     function checkModules(modules) {
         // If there are no modules, use default from config
@@ -62,7 +72,7 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
             // result must have a list of all settings
             // iterate over them and save
             for(var key in result) {
-                saveModule(result[key].module || results[key].code, result[key].data);
+                saveModule(result[key].code || result[key].module, result[key].value);
             }
             
             return true;

@@ -21,7 +21,7 @@ angular.module('MRS.App.Settings').service('MRSAppSettingsAdapter', ['$mrsappset
         },
         
         from: function checkFrom(result) {
-            return result.data.result;
+            return Array.isArray(result.data.result) ? result.data.result : [result.data.result];
         }
         
     };

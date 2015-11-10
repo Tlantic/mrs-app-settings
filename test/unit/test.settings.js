@@ -132,12 +132,24 @@ describe('MRS.Settings:', function () {
             
             it('from result must be valid', function() {
                 var fakeResult = {
-                    module: "MRS.App.Settings",
-                    version: 2  
+                    _createDate: 1447091399,
+                    _type: "setting",
+                    _uId: "410720f3-dfcf-4276-920c-1c1a10c132bb",
+                    _updateDate: 1447091399,
+                    applicationId: "8ae1f423-3801-4dee-8f87-1112be883b28",
+                    code: "mrs-app-device",
+                    description: "",
+                    public: true,
+                    status: "A",
+                    value: {
+                        module: "MRS.App.Settings",
+                        version: 2   
+                    }
                 };
+                
                 var result = settingsAdapter.check.from({data: {status: "OK", result: fakeResult}});
                 
-                expect(result).toEqual(fakeResult);
+                expect(angular.equals(result, [fakeResult])).toBeTruthy();
             });
             
             
