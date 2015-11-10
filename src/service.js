@@ -72,7 +72,7 @@ angular.module('MRS.App.Settings').factory('MRSAppSettings', ['$mrsappsettingsCo
             // result must have a list of all settings
             // iterate over them and save
             for(var key in result) {
-                saveModule(result[key].code, result[key].data);
+                saveModule(result[key].code || result[key].module, result[key].value);
             }
             
             return true;
